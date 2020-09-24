@@ -1,26 +1,43 @@
 <html>
     <head>
         <script src="jquery-3.5.1.min.js"></script>
+        <script src="config.js"></script>
         <link rel="stylesheet" href="style.css" />
         <title>RTTF Car - Commander</title>
     </head>
     <body>
 
-        <input type="text" value="192.168.0.252" id="ip" />
+        <header>
+            <input type="text" value="192.168.0.252" id="ip" />
+        </header>
 
-        <button class="btn-command" onclick="onButtonClick()">ROSTOPIC LIST</button>
-
+        <main id="command-buttons"></main>
+        
         <aside class='result'></aside>
 
         <script>
-            function onButtonClick() {
+            for(let command of CONFIG.commands) {
+                let command_button = $("<button>");
+                command_button.text(command.title);
+                command_button.click(function() {
+                    let ip = $("#ip").val();
+                    let port = 5000;
+                    let data = {"command": "rostopic list"};
+                    $.post( `http://${ip}:${port}/execute`, data, function( result ) {
+                        $( ".result" ).html( result );
+                    });
+                });
+                $("#command-buttons").append(command_button);
+            }
+
+            /*function onButtonClick() {
                 let ip = $("#ip").val();
                 let port = 5000;
                 let data = {"command": "rostopic list"};
                 $.post( `http://${ip}:${port}/execute`, data, function( result ) {
                     $( ".result" ).html( result );
                 });
-            }
+            }*/
         </script>
 
     </body>

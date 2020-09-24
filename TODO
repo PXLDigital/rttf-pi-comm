@@ -1,0 +1,3 @@
+- sources toevoegen in start_ai en stop_ai
+- commando docker exec blabla om start_ai op te roepen
+- zelfde voor recordings
