@@ -8,6 +8,8 @@
     <body>
 
         <header>
+            <h1>PiComm</h1>
+            <h3>RPi IP</h3>
             <input type="text" value="192.168.0.252" id="ip" />
         </header>
 
@@ -17,17 +19,19 @@
 
         <script>
             for(let command of CONFIG.commands) {
-                let command_button = $("<button>");
-                command_button.text(command.title);
-                command_button.click(function() {
-                    let ip = $("#ip").val();
-                    let port = 5000;
-                    let data = {"command": "rostopic list"};
-                    $.post( `http://${ip}:${port}/execute`, data, function( result ) {
-                        $( ".result" ).html( result );
+                if(!command.disabled) {
+                    let command_button = $("<button>");
+                    command_button.text(command.title);
+                    command_button.click(function() {
+                        let ip = $("#ip").val();
+                        let port = 5000;
+                        let data = {"command": "rostopic list"};
+                        $.post( `http://${ip}:${port}/execute`, data, function( result ) {
+                            $( ".result" ).html( result );
+                        });
                     });
-                });
-                $("#command-buttons").append(command_button);
+                    $("#command-buttons").append(command_button);
+                }
             }
 
             /*function onButtonClick() {
