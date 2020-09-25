@@ -5,7 +5,7 @@ Initially created for Race to the Future @Hasselt, Belgium.
 
 ## Setup
 Clone the project on the Pi.
-Make sure the Flask module is started at boot. Best way is to use crontab. (`@reboot sh /path/to/startup/script.sh`)
+Make sure the Flask module is started at boot. (use Python 3!) Best way is to use crontab. (`@reboot sh /path/to/startup/script.sh`)
 
 
 Adjust the `config.js` file in `html` folder so it contains the commands you will frequently use. A button will be created on the web page for every entry in the JSON file.
