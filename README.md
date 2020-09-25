@@ -17,5 +17,5 @@ Put the `html` folder somewhere where you can access it (e.g. online via FTP) an
 Access the webpage and click the buttons. The commands from the config file should be sent to the device at the given IP, which in turn should trigger the Flask module that will execute the commands.
 
 ## Requirements
-`pip3 install flask`
-`pip3 install flask-cors`
+* `pip3 install flask`
+* `pip3 install flask-cors`
