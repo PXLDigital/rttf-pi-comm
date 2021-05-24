@@ -6,8 +6,6 @@
     - Flask
 
     Created for the Race to the Future event, usable in all kinds of setups.
-
-    Created by Sam Vanderstraeten
 '''
 
 from flask import Flask
