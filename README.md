@@ -11,7 +11,7 @@ Make sure the Flask module is started at boot. (use Python 3!) Best way is to us
 Adjust the `config.js` file in `html` folder so it contains the commands you will frequently use. A button will be created on the web page for every entry in the JSON file.
 
 
-Put the `html` folder somewhere where you can access it (e.g. online via FTP) and optionally set the default IP to the expected Pi IP for convenience.
+Put the `rttfcar_commander` folder somewhere where you can access it (e.g. online via FTP) and optionally set the default IP to the expected Pi IP for convenience.
 
 
 Access the webpage and click the buttons. The commands from the config file should be sent to the device at the given IP, which in turn should trigger the Flask module that will execute the commands.
