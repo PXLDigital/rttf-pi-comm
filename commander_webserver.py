@@ -1,6 +1,6 @@
 '''
     This Flask module can be run on a remote host device (e.g. Raspberry Pi) and listens for commands to execute on the host.
-    An app or website can then be created to contact the Falsk module and send commands to it from a smartphone.
+    An app or website can then be created to contact the Flask module and send commands to it from a smartphone.
 
     Requirements:
     - Flask
