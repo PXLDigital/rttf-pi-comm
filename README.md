@@ -3,6 +3,8 @@
 This project can be used to send bash commands to a remote Raspberry Pi, from any device in the same network. (e.g. phone)
 Initially created for Race to the Future @Hasselt, Belgium.
 
+Still in early development, so if you have any contributions, let us know!
+
 ## Setup
 Clone the project on the Pi.
 Make sure the Flask module is started at boot. (use Python 3!) Best way is to use crontab. (`@reboot sh /path/to/startup/script.sh`)
